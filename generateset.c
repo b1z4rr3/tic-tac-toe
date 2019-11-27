@@ -4,7 +4,7 @@
 void generateset(long long int n)     //function to generate the set of possibilities
 {
 	long long int x,i,j,flag=1,redcheck=0,endcheck=0;
-	char tic[10];                     //using linear array as it would be easier
+	char tic[10];                     //using linear array as it would be easier.array stores the moves done sequentially
 	tic[9]='\0';                      //the last character is always \0
 	for(i=0;i<n;i++)
 	{
@@ -17,13 +17,13 @@ reset:
 		{
 			x=rand()%9;
 			if(flag==1)                  //flag checks whose move it is and assigns the respective value to it
-			{                            //falg==1 means it is player 1's move 
-				tic[i]=1;
+			{                            //flag==1 means it is player 1's move 
+				tic[j]=x;
 				flag=2;                  //setting flag to other player
 			}
 			else
 			{
-				tic[i]=2;                //player 2's move
+				tic[j]=x;                //player 2's move
 				flag=1;
 			}
 			redcheck=check(tic);              //check for redundancies in the current state of the game
