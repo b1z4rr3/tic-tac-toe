@@ -1,6 +1,6 @@
-#include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+using namespace std
 void generateset(long long int n)     //function to generate the set of possibilities
 {
 	long long int x,i,j,flag=1,redcheck=0,endcheck=0,validcheck=0;
@@ -57,9 +57,9 @@ int main()
 {
 	long long int n;
 	srand(time(0));
-	printf("how many times do u want to generate it?");
-	scanf("%lld",&n);
+	cout<<"how many times do u want to generate it?";
+	cin>>n;
 	generateset(n);
-	printf("\ngenerated the file for ")
+	cout<<"\ngenerated the file for ";
 	return 0;
 }
